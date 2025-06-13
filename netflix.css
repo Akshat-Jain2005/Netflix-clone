@@ -1,0 +1,321 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+body{
+ color:white;
+ background-color: black;
+}
+.header{
+  width:100%;
+  height:100vh;
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(images/header-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position:relative;
+}
+.logo{
+  width: 150px;
+  cursor:pointer;
+  padding-top:10px;
+  MARGIN-LEFT:100px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding:10px;
+  padding-right: 120px;
+}
+select{
+  padding: 3px 5px;
+  background-color:rgb(15, 14, 14) ;
+  color:#fff;
+}
+
+.sign-in:hover{
+  scale:1.5;
+  transition: 200ms ease-in-out;
+  background-color: #910202;
+  cursor:pointer;
+}
+
+.get-start:hover{
+  background-color: #910202;
+  cursor:pointer;
+}
+
+nav button{
+  border:0;
+  outline:0;
+  background:#db0001;
+  color:#fff;
+  padding:7px 20px;
+  font-size:12px;
+  border-radius:4px;
+  margin-left:10px;
+}
+
+.content{
+  position: absolute;
+  top:30%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align:center;
+  margin-top: 100px;
+} 
+
+.content h1{
+  font-size: 60px;
+  line-height: 75px;
+  font-weight: 600; 
+  max-width:650px;
+}
+.content h4{
+  font-weight:400;
+  margin-bottom: 25px;
+}
+.email-signup{
+  background: white;
+  border-radius:4px;
+  display: flex;
+  align-items:center;
+  margin-top:30px;
+  overflow: auto;
+}
+.email-signup input{
+  flex: 1;
+  border: 0;
+  outline:0;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.email-signup button{
+  background:#db0001;
+  border:0;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 30px;
+}
+
+.features{
+  padding:50px 12%;
+  font-size:22px;
+}
+.row{
+  display: flex;
+  width:100%;
+  flex-wrap:wrap;
+  align-items:center;
+  padding: 50px 0;
+  padding-top: 0;
+}
+.random{
+  padding-left: 30%;
+  display: flex;
+  flex-wrap:wrap;
+  align-items:center;
+  font-size: 60px;
+  margin-top: 120px;
+  margin-bottom:0;
+  font-weight:500;
+}
+.txt-col{
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col{
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col img{
+  display:block;
+  width:90%;
+  margin:auto;
+}
+.features h2{
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.faq{
+ padding:10px 12%;
+ text-align: center;
+ font-size: 20px;
+}
+
+.faq h2{
+  font-weight:500;
+  font-size:40px;
+}
+
+.sequence{
+  margin:60px auto;
+  width:100%;
+  max-width: 750px;
+}
+.sequence li{
+  list-style: none;
+  width:100%;
+  padding:5px;
+}
+
+.sequence li label{
+  display: flex;
+  align-items:center;
+  padding:20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor:pointer;
+  position: relative;
+}
+label::after{
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right:20px;
+  transition: transform 0.5s;
+}
+input[type="radio"]{
+  display: none;
+}
+.sequence .answer{
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height:0;
+  overflow:hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.sequence input[type="radio"]:checked+label+.answer{
+max-height: 600px;
+padding: 30px 20px;
+}
+.sequence input[type="radio"]:checked+label::after{
+  transform:rotate(135deg);
+}
+.small{
+  font-size:15px;
+}
+#email-last{
+  max-width: 600px;
+  margin:20px auto 60px;
+}
+.footer{
+  padding-left:200px;
+  color:rgb(196, 192, 192);
+  flex-wrap: wrap;
+}
+.footer h6{
+font-weight:400;
+font-size:15px;
+margin-bottom:30px;
+}
+.footer .column{
+  flex-direction: column;
+  flex-basis: 30%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.footer .column a{
+display: block;
+color:rgb(196, 192, 192);
+font-size:14px;
+margin-bottom:10px;
+}
+.footer .row{
+  align-items: flex-start;
+  padding:10px 0;
+}
+
+.copyright{
+  font-size: 14px;
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+.smaller{
+  font-size:12px;
+  margin-top:30px;
+  margin-bottom:10px;
+  padding-right:50px;
+}
+.smaller a{
+  color:#fff;
+}
+
+@media only screen and (max-width:650px){
+ .logo{
+  width:100px;
+  margin-left:10px;
+ }
+ nav{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding:10px;
+ }
+ nav button{
+  float: right;
+  padding:5px 20px;
+  margin-left:10px;
+ }
+
+ .content{
+  position:unset;
+  transform:none;
+  padding-top:160px;
+ }
+ .content h1{
+  font-size:35px;
+ }
+ .email-signup button{
+  font-size:14px;
+  padding:10px 15px;
+ }
+ .random{
+  font-size:30px;
+  padding:0.1px 0;
+  padding-left: 70px;
+ }
+.txt-col,.img-col{
+  flex-basis: 100%;
+}
+.features h2{
+font-size:30px;
+}
+.features p{
+  font-size:15px;
+  }
+  .row:nth-child(2),.row:nth-child(4){
+flex-direction: column-reverse;
+  }
+  .features .row{
+    padding: 10px 0;
+  }
+  .faq h2{
+    font-size:20px;
+  }
+  .sequence .answer{
+    font-size:15px;
+  }
+  .sequence li label{
+    padding: 10px;
+    font-size: 14px;
+  }
+  label::after{
+    font-size:22px;
+  }
+  .footer{
+    padding:10px 0;
+    padding-left:20px;
+  }
+}
+
